@@ -8,14 +8,17 @@ f.close()
 known_face_names, known_face_encodings = zip(*namedEncoding)
 cap = cv2.VideoCapture(0)
 if not cap.isOpened():
+    
     raise IOError("Cannot open webcam")
 while True:
+
     ret, frame = cap.read()
     face_names = []
     face_locations = face_recognition.face_locations(frame)
     face_encodings = face_recognition.face_encodings(frame, known_face_locations= face_locations)
 
     for face_encode in face_encodings:
+
         matches = face_recognition.compare_faces(known_face_encodings, face_encode)
         name = "Unknown"
         if True in matches:
