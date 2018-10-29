@@ -28,7 +28,7 @@ while True:
         face_names.append(name)
 
     for face_location, name in zip(face_locations, face_names):
-        
+
             top, right, bottom, left = face_location
             name_color = (0, 0, 255) if (name == "Unknown")  else (0, 255, 0)
             cv2.rectangle(frame, (left, top), (right, bottom), name_color, 2)
