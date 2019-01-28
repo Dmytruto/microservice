@@ -1,2 +1,2 @@
 # microservice
-![Diagram](http://jgraph.github.io/microservice/Diagram.png)
+![alt text](https://github.com/Dmytruto/microservice/Diagram.png)
